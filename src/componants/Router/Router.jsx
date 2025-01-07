@@ -48,7 +48,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: "/viewDetails/:id",
-                element: <PrivetRouter><ViewDetails></ViewDetails></PrivetRouter>,
+                element: <ViewDetails></ViewDetails>,
                 loader: ({params})=>fetch(`https://sports-equipments-server-three.vercel.app/sportsEquipments/${params.id}`)
             },
             {

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../componants/AuthProvider/AuthProvider';
 import Loading from '../../componants/Loading/Loading';
 import ProductCard from './productCard';
+import './products.css'
 
 const Products = ({ data }) => {
 
@@ -72,10 +73,10 @@ const Products = ({ data }) => {
                 <p className='text-center pb-12'>Choose your favorite product and go back to your game</p>
                 <div className='flex lg:flex-row flex-col gap-4'>
 
-                    <div className=' lg:w-[20%] grid grid-cols-1 space-y-3 h-[350px]'>
+                    <div className=' lg:w-[15%] grid grid-cols-1 space-y-2 h-[350px]'>
                         <p className='text-3xl rancho-font pb-3 font-semibold text-gray-500'>Select Category</p>
                         {
-                            categories && categories.map(item => <NavLink key={item._id} onClick={() => handleCategory(item.category)} className={`${darkMode ? ' bg-[#140a49] hover:bg-slate-500 hover:text-white text-center py-2 h-12 rounded-3xl' : 'border hover:bg-slate-500 hover:text-white text-center py-2 h-12 rounded-3xl'}`}>{item.category}</NavLink>)
+                            categories && categories.map(item => <NavLink key={item._id} onClick={() => handleCategory(item.category)} className={`${darkMode ? ' bg-[#140a49] hover:bg-sky-400 hover:text-white text-center py-2 h-12 rounded-3xl' : 'border hover:bg-sky-400 hover:text-white text-center py-2 h-12 rounded-3xl'}`}>{item.category}</NavLink>)
                         }
 
                     </div>
@@ -100,7 +101,7 @@ const Products = ({ data }) => {
                         {
                             loading && <div className="loading loading-spinner loading-lg"></div>
                         }
-                        <div className='  grid  grid-cols-1 lg:grid-cols-3 gap-5'>
+                        <div className='  grid  grid-cols-1 lg:grid-cols-4 gap-5'>
 
 
                             {

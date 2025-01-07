@@ -5,7 +5,7 @@ import { signOut } from 'firebase/auth';
 import { auth } from '../firebase/Firebase';
 import { useState } from "react";
 import Switch from "react-switch";
-import logos from '../../assets/logos.png'
+import logo from '../../assets/logo1.webp'
 import './navbar.css'
 import { Tooltip } from 'react-tooltip'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
@@ -98,7 +98,12 @@ const Navbar = () => {
                                 {links}
                             </ul>
                         </div>
-                        <Link className="lg:text-3xl text-2xl " to="/"><img className='w-[200px] pl-6 -mt-14' src={logos} data-tooltip-id="my-tooltip" data-tooltip-content="Sports Equipment Ltd." alt="" /></Link>
+                        <Link className="lg:text-3xl text-2xl " to="/">
+                            <p className='font-semibold -mt-9 relative'>
+                                <span className='font-semibold uppercase'>Sports Gear</span>
+                                <img src={logo} className='h-16 absolute top-0 left-28' alt="logo" />
+                                 </p>
+                        </Link>
                         <Tooltip id="logo" />
                     </div>
                     <div className="navbar-center hidden lg:flex">

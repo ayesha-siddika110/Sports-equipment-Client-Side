@@ -5,8 +5,6 @@ import googleimg from '../../assets/google.png'
 import gitimg from '../../assets/git.png'
 import fbimg from '../../assets/fb.png'
 import twitimg from '../../assets/twitter.png'
-import { fetchSignInMethodsForEmail, GoogleAuthProvider, linkWithCredential } from 'firebase/auth';
-import { auth } from '../../componants/firebase/Firebase';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 
