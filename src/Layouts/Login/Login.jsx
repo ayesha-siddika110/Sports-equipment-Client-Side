@@ -7,6 +7,8 @@ import fbimg from '../../assets/fb.png'
 import twitimg from '../../assets/twitter.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import toast from 'react-hot-toast';
+import Lottie from 'lottie-react';
+import loginLottie from '../../assets/lottie/login.json'
 
 
 const Login = () => {
@@ -84,10 +86,14 @@ const Login = () => {
     }
 
     return (
-        <div className={`flex flex-col justify-center items-center py-8`}>
+        <div className={`flex lg:flex-row md:flex-row flex-col justify-center items-center py-20 w-[90%] m-auto`}>
+            <div className='md:w-[50%]'>
+            <Lottie animationData={loginLottie} loop={true} />
+            </div>
+            <div className='md:w-[50%] w-[95%] m-auto'>
 
-            <form onSubmit={handleLogin} className="card-body shadow-lg border w-[40%]">
-                <h1 className='text-5xl font-semibold text-center py-2'>Login</h1>
+            <form onSubmit={handleLogin} className="card-body shadow-lg border lg:w-[70%] w-[100%]">
+                <h1 className='text-4xl font-semibold text-center py-2'>Login</h1>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
@@ -105,18 +111,19 @@ const Login = () => {
                     <p className='text-xl absolute right-10 top-12' onClick={handleEye}>{eye ? <FaEye /> : <FaEyeSlash />}</p>
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn py-3 bg-slate-600 text-white">Login</button>
+                    <button className="btn py-3 bg-sky-600 text-white">Login</button>
                 </div>
                 <p className='text-center'>----------OR-----------</p>
                 <div className='flex justify-center gap-7'>
                     <h1 onClick={handleGoogleLogin} className='font-bold cursor-pointer '><img className='w-10' src={googleimg} alt="google" /></h1>
                     {/* <h1 className='font-bold cursor-pointer '><img className='w-16 rounded-full' src={fbimg} alt="facebook" /></h1> */}
-                    <h1 onClick={handletwitterlogin} className='font-bold cursor-pointer '><img className='w-10' src={twitimg} alt="" /></h1>
-                    <h1 onClick={handlegithublogin} className='font-bold cursor-pointer '><img className='w-10' src={gitimg} alt="" /></h1>
+                    {/* <h1 onClick={handletwitterlogin} className='font-bold cursor-pointer '><img className='w-10' src={twitimg} alt="" /></h1>
+                    <h1 onClick={handlegithublogin} className='font-bold cursor-pointer '><img className='w-10' src={gitimg} alt="" /></h1> */}
 
                 </div>
                 <p className='text-red-600 text-sm py-2'>{errorText}</p>
             </form>
+            </div>
 
         </div>
     );

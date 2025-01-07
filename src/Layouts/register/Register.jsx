@@ -3,13 +3,21 @@ import { AuthContext } from '../../componants/AuthProvider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import registerLottie from '../../assets/lottie/register.json'
+import Lottie from 'lottie-react';
+import googleimg from '../../assets/google.png'
+import gitimg from '../../assets/git.png'
+import fbimg from '../../assets/fb.png'
+import twitimg from '../../assets/twitter.png'
 
 const Register = () => {
     const { createUsers, updateProfileData } = useContext(AuthContext)
     const navigate = useNavigate()
+    const { LoginUser, SigninWithGoogle, twitterSignIn, githubSignIn } = useContext(AuthContext)
 
     const [isvalid, setIsvalid] = useState(null)
     const [isregister, setregister] = useState(false)
+        const [errorText ,setErrorText] = useState()
 
 
 
@@ -67,11 +75,58 @@ const Register = () => {
 
     }
 
+    const handleGoogleLogin = () => {
+        SigninWithGoogle()
+            .then(res => {
+                // console.log(res);
+                navigate("/")
+
+            })
+            .catch(err => {
+                console.log(err);
+
+            })
+    }
+    const handletwitterlogin = () => {
+        twitterSignIn()
+            .then(res => {
+                // console.log(res);
+
+            })
+            .catch(err => {
+                console.log(err);
+
+            })
+    }
+    const handlegithublogin = () => {
+        githubSignIn()
+            .then(res => {
+                // console.log(res);
+                navigate("/")
+
+            })
+            .catch(err => {
+                console.log(err.message);
+                // handleError(err)
+                if(err.message == 'Firebase: Error (auth/account-exists-with-different-credential).'){
+                    setErrorText('this email is already login by google please login with google');
+                    
+                }
+
+
+            })
+    }
+
+
 
     return (
-        <div className='flex flex-col justify-center items-center'>
-            <form onSubmit={handleRegister} className="card-body border shadow-lg w-[40%] my-4">
-                <h1 className='text-5xl font-semibold text-center py-2'>Registration</h1>
+        <div className='flex lg:flex-row md:flex-row flex-col justify-center items-center py-20 w-[90%] m-auto'>
+            <div className='md:w-[50%] p-20'>
+            <Lottie animationData={registerLottie} loop={true} />
+            </div>
+            <div className='md:w-[50%] w-[95%] m-auto'>
+            <form onSubmit={handleRegister} className="card-body border shadow-lg lg:w-[70%] w-[100%] my-4">
+                <h1 className='text-4xl font-semibold text-center py-2'>Registration</h1>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">name</span>
@@ -98,12 +153,19 @@ const Register = () => {
                     
                 </div>
                 <div className="form-control mt-6">
-                    <button className="bg-slate-600 text-white py-3 rounded-lg btn">register</button>
+                    <button className="bg-sky-600 text-white py-3 rounded-lg btn">register</button>
                 </div>
-                <div>
-
-                </div>
+                  <p className='text-center'>----------OR-----------</p>
+                                <div className='flex justify-center gap-7'>
+                                    <h1 onClick={handleGoogleLogin} className='font-bold cursor-pointer '><img className='w-10' src={googleimg} alt="google" /></h1>
+                                    {/* <h1 className='font-bold cursor-pointer '><img className='w-16 rounded-full' src={fbimg} alt="facebook" /></h1> */}
+                                    {/* <h1 onClick={handletwitterlogin} className='font-bold cursor-pointer '><img className='w-10' src={twitimg} alt="" /></h1>
+                                    <h1 onClick={handlegithublogin} className='font-bold cursor-pointer '><img className='w-10' src={gitimg} alt="" /></h1> */}
+                
+                                </div>
+                                {/* <p className='text-red-600 text-sm py-2'>{errorText}</p> */}
             </form>
+            </div>
         </div>
     );
 };
