@@ -3,6 +3,8 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../componants/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
+import banner from '../../assets/banner-small.jpg'
+
 
 const MyEquipments = () => {
     const { user, darkMode } = useContext(AuthContext)
@@ -63,7 +65,21 @@ const MyEquipments = () => {
 
     return (
         <div className={`${darkMode && 'bg-[#030725] text-white'}`}>
+             <div
+                style={{ backgroundImage: `url(${banner})`, backgroundSize: 'cover' }}
+                className=' h-52 flex flex-col text-center text-black items-center justify-center'>
+                <h1 className='text-4xl'>My Added Sports Equipments</h1>
+                <p> Whether you're an amateur or a professional, choosing the right sports gear tailored to your needs is key to maximizing your potential and enjoying the game.</p>
+
+            </div>
+            {
+                    myProduct.length === 0 && <div className='flex flex-col items-center justify-center pt-20'> 
+                        <p className='text-4xl text-gray-500'>No Added Equipments here</p>
+                        <p>Go to the <Link to="/addEquipments" className='underline text-sky-600' >Add Equipments Page</Link></p>
+                    </div>
+                }
             <div className="grid md:grid-cols-2 lg:grid-cols-3 w-[80%] m-auto gap-8 py-8">
+                
 
                 {
                     Array.isArray(myProduct) ? myProduct.map((item, index) => <div key={`${item._id} ${index}`} >

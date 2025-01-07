@@ -1,0 +1,38 @@
+[
+    {
+      "buyerName": "Aisha Rahman",
+      "buyerImage": "https://i.ibb.co/qYQkyrd/coun-2.jpg",
+      "title": "Amazing Quality!",
+      "description": "The product quality exceeded my expectations. Highly recommend!",
+      "rating": 5
+    },
+    {
+      "buyerName": "John Smith",
+      "buyerImage": "https://i.ibb.co/0cC0dgQ/coun-5.jpg",
+      "title": "Great Service",
+      "description": "Fast delivery and excellent customer support. Will buy again!",
+      "rating": 4
+    },
+    {
+      "buyerName": "Fatima Noor",
+      "buyerImage": "https://i.ibb.co/HY2Spmq/coun-4.jpg",
+      "title": "Value for Money",
+      "description": "Worth every penny. Exceptional experience overall.",
+      "rating": 5
+    },
+    {
+      "buyerName": "Liam Patel",
+      "buyerImage": "https://i.ibb.co/TMGnnXf/coun-3.webp",
+      "title": "Highly Satisfied",
+      "description": "The purchase was seamless, and the product is fantastic!",
+      "rating": 4
+    },
+    {
+      "buyerName": "Sophia Chen",
+      "buyerImage": "https://i.ibb.co/bgWMk6n/coun-6.jpg",
+      "title": "Impressive Product",
+      "description": "The attention to detail and quality are outstanding.",
+      "rating": 5
+    }
+  ]
+  

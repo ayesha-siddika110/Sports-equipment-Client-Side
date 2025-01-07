@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import logos from '../../assets/logos.png'
+import logo from '../../assets/logo1.webp'
 
 const Footer = () => {
     const {darkMode} = useContext(AuthContext)
@@ -13,9 +14,14 @@ const Footer = () => {
         <div className={`${darkMode ? 'bg-[#050c3b] text-white' : 'bg-slate-200 text-black'} `}>
             <footer className="footer w-[80%] m-auto  flex flex-col lg:flex-row lg:justify-between items-center py-20">
                 <aside>
-                    <Link className="lg:text-3xl text-2xl rancho-font" to="/"><img className='w-[200px]' src={logos} alt="" /></Link>
-                    <p className='pl-6'>
-                        Sports Equipment Ltd.
+                    <Link className="lg:text-3xl text-2xl pb-10 pt-8 " to="/">
+                                                <p className='font-semibold -mt-9 relative'>
+                                                    <span className='font-semibold uppercase'>Sports Gear</span>
+                                                    <img src={logo} className='h-16 absolute top-0 left-28' alt="logo" />
+                                                     </p>
+                    </Link>
+                    <p className=''>
+                        Sports Gear Ltd.
                         <br />
                         Your neccesery our responsibility
                     </p>

@@ -16,6 +16,7 @@ import MyEquipments from '../../Layouts/MyEquipments/MyEquipments';
 import UpdateEquipment from '../../Layouts/UpdateEquipments/UpdateEquipment';
 import PageError from '../pageError/PageError';
 import ViewDetails from '../../Layouts/viewDetails/ViewDetails';
+import AboutUs from '../../Layouts/AboutUs/AboutUs';
 
 const Router = createBrowserRouter([
     {
@@ -62,7 +63,11 @@ const Router = createBrowserRouter([
                 path: "/updateEquipments/:id",
                 element: <UpdateEquipment></UpdateEquipment>,
                 loader: ({params})=>fetch(`https://sports-equipments-server-three.vercel.app/sportsEquipments/${params.id}`)
-            }
+            },
+            // {
+            //     path: "/aboutUs",
+            //     element: <AboutUs></AboutUs>
+            // }
         ]
     }
 ])

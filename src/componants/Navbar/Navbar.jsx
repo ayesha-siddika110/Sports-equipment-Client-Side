@@ -27,6 +27,7 @@ const Navbar = () => {
     const links = <div className="lg:space-x-4">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/allEquipments">All Sports Equipment</NavLink>
+        <a href='#aboutUs'>About Us</a>
         {
             user && <>
                 <NavLink to="/addEquipments">Add Equipment</NavLink>
@@ -62,8 +63,8 @@ const Navbar = () => {
                 
 
             </div> : <>
-                <Link to="/login" className='bg-slate-500 py-2 px-5 rounded-md shadow-xl text-white'>Login</Link>
-                <Link to="/register" className='bg-slate-500 py-2 px-5 rounded-md shadow-xl text-white'>Register</Link>
+                <Link to="/login" className='bg-sky-500 shadow-lg shadow-sky-600 py-2 px-5 rounded-md  text-white'>Login</Link>
+                <Link to="/register" className='bg-sky-500 shadow-lg shadow-sky-600 py-2 px-5 rounded-md text-white'>Register</Link>
             </>
         }
     </>

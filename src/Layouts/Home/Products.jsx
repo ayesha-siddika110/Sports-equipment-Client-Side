@@ -69,7 +69,7 @@ const Products = ({ data }) => {
         <>
 
             <div className='w-[90%] m-auto'>
-                <h1 className='text-center text-5xl font-semibold pt-12 pb-1'>Products</h1>
+                <h1 className='text-center text-4xl font-semibold pt-12 pb-1'>Top Products</h1>
                 <p className='text-center pb-12'>Choose your favorite product and go back to your game</p>
                 <div className='flex lg:flex-row flex-col gap-4'>
 
@@ -83,7 +83,7 @@ const Products = ({ data }) => {
                     {/* products */}
                     <div className=' w-[95%]'>
                         <div className='flex  justify-end gap-6'>
-                            <select className={`select select-ghost border-2 border-slate-600 `} defaultValue={``} onChange={(e) => {
+                            <select className={`select select-ghost border-2 border-sky-600 `} defaultValue={``} onChange={(e) => {
                                 if (e.target.value === "asc") {
                                     handleAssendingOrder();
                                 } else if (e.target.value === "desc") {

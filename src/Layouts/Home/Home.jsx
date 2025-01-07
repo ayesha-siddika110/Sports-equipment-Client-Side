@@ -14,6 +14,8 @@ import { useLoaderData } from 'react-router-dom';
 import Sponsors from './Sponsors';
 import Maplocation from './MapLocation';
 import { Fade } from 'react-awesome-reveal';
+import Testimonials from './Testimonials';
+import AboutUs from '../AboutUs/AboutUs';
 
 
 
@@ -41,14 +43,6 @@ const Home = () => {
 
     return (
         <div className={`relative ${darkMode && 'bg-[#030725] text-white'}`}>
-
-            {/* <Fade cascade damping={3}>
-  <p>I enter first...</p>
-  <p>...then comes my turn...</p>
-  <p>...and finally you see me!</p>
-</Fade> */}
-
-           
 
             {/* Silder */}
             <div className="carousel w-full h-[570px] text-white">
@@ -135,6 +129,9 @@ const Home = () => {
 
             {/* product section */}
             <Products data={data}></Products>
+
+            <Testimonials></Testimonials>
+            <AboutUs></AboutUs>
             <Sponsors></Sponsors>
             <Maplocation></Maplocation>
         </div>

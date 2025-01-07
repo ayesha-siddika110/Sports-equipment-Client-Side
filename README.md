@@ -1,4 +1,4 @@
-## Sports Equipment LTD. 🏸
+## Sports Gear LTD. 🏸
 Welcome to Sports Equipment Hub, your one-stop destination for top-quality sports gear! Our website is designed to provide athletes, enthusiasts, and sports lovers with the best equipment to fuel their passion and enhance their performance.
 
 ## Features our website

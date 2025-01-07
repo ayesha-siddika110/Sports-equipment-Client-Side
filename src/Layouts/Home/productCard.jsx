@@ -12,7 +12,7 @@ const ProductCard = ({ item }) => {
         <div className={`${darkMode && 'text-white'}`}>
             <>
 
-                <div className={`${darkMode ? 'p-4 rounded-xs border border-black text-white  shadow-xl bg-[#0d0631]' : 'p-4 rounded-3xl   shadow-xl'}`}>
+                <div className={`${darkMode ? 'p-4 rounded-xs border border-black text-white  shadow-xl bg-[#0d0631]' : 'p-4 rounded-md   shadow-xl'}`}>
                     <img src={item?.image} className=' rounded-xs w-full bg-cover h-[150px]' alt="" />
                     <div className='space-y-1'>
                         <div className='flex justify-between mt-3'>
@@ -27,7 +27,7 @@ const ProductCard = ({ item }) => {
 
                         {/* </div> */}
                         <div className='pt-2'>
-                            <Link to={`/viewDetails/${item._id}`} className='border hover:bg-slate-600 hover:text-white  cursor-pointer border-slate-600 text-center py-1 px-3 rounded-3xl w-32'>See More</Link>
+                            <Link to={`/viewDetails/${item._id}`} className='border hover:bg-sky-600 hover:text-white  cursor-pointer border-sky-600 text-center py-1 px-3 shadow-md shadow-sky-600 w-32'>See More</Link>
                         </div>  
                     </div>
                 </div>

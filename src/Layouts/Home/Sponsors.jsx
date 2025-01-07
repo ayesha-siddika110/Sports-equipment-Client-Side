@@ -10,10 +10,10 @@ import img6 from '../../assets/s6.png'
 const Sponsors = () => {
     return (
         <div>
-            <h1 className='text-center text-5xl font-semibold pt-24 pb-1'>Our Valued Sponsors</h1>
+            <h1 className='text-center text-4xl font-semibold pt-24 pb-1'>Our Valued Sponsors</h1>
             <p className='text-center pb-12 w-[80%] m-auto'>We are proud to partner with some of the most reputable brands in the sports and fitness industry.</p>
 
-            <Marquee className='space-x-10 h-28 overflow-hidden w-[80%] '>
+            <Marquee className='space-x-10 h-20 overflow-hidden w-[80%] '>
                 <img className='' src={img1} alt="" />
                 <img src={img2} alt="" />
                 <img src={img3} alt="" />
