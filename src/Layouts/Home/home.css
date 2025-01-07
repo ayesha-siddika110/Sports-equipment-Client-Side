@@ -1,0 +1,30 @@
+.img1{
+    background-image: url('../../assets/sports-banner2.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgba(0, 0, 0, 0.397);
+    background-blend-mode: multiply; */
+    
+}
+.img2{
+    background-image: url('../../assets/sports-banner1.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgba(0, 0, 0, 0.397);
+    background-blend-mode: multiply; */
+    
+}
+.img3{
+    background-image: url('../../assets/sports-banner3.jpg');
+    height:100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgba(0, 0, 0, 0.397);
+    background-blend-mode: multiply; */
+    
+}

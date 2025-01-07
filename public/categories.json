@@ -1,0 +1,23 @@
+{
+    "categories": [
+        {
+            "id" : 111,
+            "category": "All"
+
+
+        },
+      {
+        "id": 1,
+        "category": "Cricket"
+      },
+      {
+        "id": 2,
+        "category": "football"
+      },
+      {
+        "id": 3,
+        "category": "tenisball"
+      }
+    ]
+  }
+  
